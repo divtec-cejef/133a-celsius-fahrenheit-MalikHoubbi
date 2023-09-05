@@ -8,14 +8,13 @@
 'use strict'; // Demande un interprétation stricte du code
 
 let degreCelcius = prompt('Temperature en celcius :');
-let degreFahrenheit;
 
-degreCelcius = parseInt(degreCelcius);
+degreCelcius = parseFloat(degreCelcius);
 
 // Test si la variable degreCelcius est NaN
 if (isNaN(degreCelcius)) {
-    alert(`Erreur, saisissez un nombre`);
+    alert('Erreur, saisissez un nombre');
 }else {
-    degreFahrenheit = degreCelcius * 9 / 5 + 32;
+    let degreFahrenheit = degreCelcius * 9 / 5 + 32;
     alert(`${degreCelcius}°C = ${degreFahrenheit}°F`);
 }
